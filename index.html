@@ -90,12 +90,14 @@
 <li>在命令行中 输入命令：npm install hexo-deployer-git –save #部署插件</li>
 <li>下载git 客户端，按照默认安装安装完成后，在之前的blog文件夹中点击鼠标右键点击git bash</li>
 <li>在git终端中输入hexo init xxx #初始化网站</li>
-<li>进入blog文件夹中，在根目录中打开 _config.yml 文件，最后一行添加：</li>
-<li></li>
+<li><p>进入blog文件夹中，在根目录中打开 _config.yml 文件，最后一行添加：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git </span><br><span class="line">  repo: git@github.com:xxxx/xxxxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭文件，在git终端中输入：</p>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git </span><br><span class="line">  repo: git@github.com:xxxx/xxxxx.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">* 关闭文件，在git终端中输入：</span><br></pre></td></tr></table></figure>
-<p>hexo g<br>hexo d</p>
-<p><code>`</code><br>自此github page 博客搭建完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>自此github page 博客搭建完成。</p>
 <h1 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h1><ul>
 <li><p>进入你购买域名厂商的后台，找到域名解析。添加解析规则<br>@   cname   xxxx.github.io<br>www cname   xxxx.github,io</p>
 </li>
@@ -107,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zcxbb.com/2019/02/18/我的第一篇博客/" data-id="cjsa2jiv40000povsy0ilwqp5" class="article-share-link">Share</a>
+      <a data-url="http://zcxbb.com/2019/02/18/我的第一篇博客/" data-id="cjsa2mxbd0000ggvsjk4x7ocv" class="article-share-link">Share</a>
       
       
     </footer>
