@@ -17,20 +17,20 @@
   
   <title>人生的意义在于追求的过程，而不是最后的结果</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux网络编程TCP网络编程基础 套接字结构  1234struct socketaddr&amp;#123;	sa_family_t sa_family;/*协议族*/	char sa_data[14];     /*协议族数据*/&amp;#125; sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_">
+  <meta name="description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
 <meta property="og:type" content="article">
 <meta property="og:title" content="人生的意义在于追求的过程，而不是最后的结果">
 <meta property="og:url" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/index.html">
 <meta property="og:site_name" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta property="og:description" content="Linux网络编程TCP网络编程基础 套接字结构  1234struct socketaddr&amp;#123;	sa_family_t sa_family;/*协议族*/	char sa_data[14];     /*协议族数据*/&amp;#125; sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_">
+<meta property="og:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://zcxbb.com/img/socketaddr.jpg">
-<meta property="og:image" content="http://zcxbb.com/img/cs.jpg">
-<meta property="og:updated_time" content="2019-02-19T03:53:56.391Z">
+<meta property="og:image" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/img/socketaddr.jpg">
+<meta property="og:image" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/img/cs.jpg">
+<meta property="og:updated_time" content="2019-02-19T05:43:34.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta name="twitter:description" content="Linux网络编程TCP网络编程基础 套接字结构  1234struct socketaddr&amp;#123;	sa_family_t sa_family;/*协议族*/	char sa_data[14];     /*协议族数据*/&amp;#125; sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_">
-<meta name="twitter:image" content="http://zcxbb.com/img/socketaddr.jpg">
+<meta name="twitter:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
+<meta name="twitter:image" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/img/socketaddr.jpg">
   
     <link rel="alternate" href="/atom.xml" title="人生的意义在于追求的过程，而不是最后的结果" type="application/atom+xml">
   
@@ -166,13 +166,13 @@
             <h1 id="Linux网络编程"><a href="#Linux网络编程" class="headerlink" title="Linux网络编程"></a>Linux网络编程</h1><h2 id="TCP网络编程基础"><a href="#TCP网络编程基础" class="headerlink" title="TCP网络编程基础"></a>TCP网络编程基础</h2><ul>
 <li>套接字结构</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct socketaddr&#123;</span><br><span class="line">	sa_family_t sa_family;/*协议族*/</span><br><span class="line">	char sa_data[14];     /*协议族数据*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>struct socketaddr{<br>    sa_family_t sa_family;/<em>协议族</em>/<br>    char sa_data[14];     /<em>协议族数据</em>/<br>}</p>
 <p>sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节</p>
 <ul>
 <li>在以太网中一般采用struct socketadd_in 进行设置</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">struct socketaddr_in&#123;</span><br><span class="line">	u8 	sin_len;</span><br><span class="line">	u8 	sin_family;</span><br><span class="line">	u16	sin_port;</span><br><span class="line">	struct in_addr sin_addr;</span><br><span class="line">	char sin_zero[8]; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>两个结构体长度都为16个字节，两者对应关系如下：<br><img src="/img/socketaddr.jpg" alt></p>
+<p>struct socketaddr_in{<br>    u8     sin_len;<br>    u8     sin_family;<br>    u16    sin_port;<br>    struct in_addr sin_addr;<br>    char sin_zero[8];<br>}</p>
+<p>两个结构体长度都为16个字节，两者对应关系如下：<br><img src="./img/socketaddr.jpg" alt></p>
 <h2 id="TCP-网络编程流程"><a href="#TCP-网络编程流程" class="headerlink" title="TCP 网络编程流程"></a>TCP 网络编程流程</h2><ul>
 <li>tcp网络架构<br>tcp网络编程有两种模式，1种是服务器模式，1种是客户端模式。服务器创建服务，等待客户端用户连接。</li>
 <li>服务端程序设计模式<br>流程主要是：<ol>
@@ -192,7 +192,7 @@
 </ol>
 </li>
 </ul>
-<p><img src="/img/cs.jpg" alt></p>
+<p><img src="./img/cs.jpg" alt></p>
 <ul>
 <li>linux 信号处理<br>信号是有时候发生某些事件时的通知，有时候也称为软中断。信号的捕捉由系统完成，信号的注册函数signal()</li>
 </ul>
