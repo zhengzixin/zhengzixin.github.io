@@ -15,22 +15,15 @@
   </script>
 
   
-  <title>人生的意义在于追求的过程，而不是最后的结果</title>
+  <title>Tag: socket | 人生的意义在于追求的过程，而不是最后的结果</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta property="og:url" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/index.html">
+<meta property="og:url" content="http://zcxbb.com/tags/socket/index.html">
 <meta property="og:site_name" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta property="og:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/img/socketaddr.jpg">
-<meta property="og:image" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/img/cs.jpg">
-<meta property="og:updated_time" content="2019-02-19T05:43:34.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta name="twitter:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
-<meta name="twitter:image" content="http://zcxbb.com/2019/02/19/Linux网络编程笔记1/img/socketaddr.jpg">
   
     <link rel="alternate" href="/atom.xml" title="人生的意义在于追求的过程，而不是最后的结果" type="application/atom+xml">
   
@@ -73,12 +66,8 @@
                 Home
             </a>
             
-            <a class="nav-item" href="/works">
-                My Works
-            </a>
-            
-            <a class="nav-item" href="/about">
-                About
+            <a class="nav-item" href="/tags">
+                Tags
             </a>
             
         </div>
@@ -93,12 +82,8 @@
                 Home
             </a>
             
-            <a class="nav-item flex-1" href="/works">
-                My Works
-            </a>
-            
-            <a class="nav-item flex-1" href="/about">
-                About
+            <a class="nav-item flex-1" href="/tags">
+                Tags
             </a>
             
         </div>
@@ -108,143 +93,61 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <!--博文页面-->
-
-<style>
-    .header-box {
-        height: 370px;
-        filter: blur(10px);
-        background-size: cover;
-        background-color: lightsteelblue;
+          <style>
+    .container.tag-cate-wrap {
+        min-height: 93vh;
     }
 
-    .post-box {
-        padding: 15px;
-        padding-top: 60px;
-        min-height: 80vh;
-        margin-top: -200px;
-        border-radius: 4px;
-        background-color: rgba(255,255,255,.8);
+    .category-title-inner {
+        padding-top: 50px;
     }
 
-    .post-avatar {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-    }
-
-    .flow-chart {
-        text-align: center;
-    }
-
-    img[alt="post-cover"] {
-        display: none;
+    strong {
+        text-transform: capitalize;
     }
 </style>
-<header>
-    <div id="header_box" class="header-box"></div>
-</header>
-<section>
-    <div class="container post-box">
-        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
-            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
-                <strong>Null</strong>
-            </h1>
-            
-            <div class="is-flex align-center">
-                <img class="post-avatar" src="/img/head.png">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> 熙宝爸爸</span>
-                <span class="post-date sub-title">at: 2019-02-19</span>
-            </div>
-            
-                <div>
-                    
-                </div>
-            
-        </div>
-        <div class="content" style="overflow: auto">
-            <h1 id="Linux网络编程"><a href="#Linux网络编程" class="headerlink" title="Linux网络编程"></a>Linux网络编程</h1><h2 id="TCP网络编程基础"><a href="#TCP网络编程基础" class="headerlink" title="TCP网络编程基础"></a>TCP网络编程基础</h2><ul>
-<li>套接字结构</li>
-</ul>
-<p>struct socketaddr{<br>    sa_family_t sa_family;/<em>协议族</em>/<br>    char sa_data[14];     /<em>协议族数据</em>/<br>}</p>
-<p>sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节</p>
-<ul>
-<li>在以太网中一般采用struct socketadd_in 进行设置</li>
-</ul>
-<p>struct socketaddr_in{<br>    u8     sin_len;<br>    u8     sin_family;<br>    u16    sin_port;<br>    struct in_addr sin_addr;<br>    char sin_zero[8];<br>}</p>
-<p>两个结构体长度都为16个字节，两者对应关系如下：<br><img src="./img/socketaddr.jpg" alt></p>
-<h2 id="TCP-网络编程流程"><a href="#TCP-网络编程流程" class="headerlink" title="TCP 网络编程流程"></a>TCP 网络编程流程</h2><ul>
-<li>tcp网络架构<br>tcp网络编程有两种模式，1种是服务器模式，1种是客户端模式。服务器创建服务，等待客户端用户连接。</li>
-<li>服务端程序设计模式<br>流程主要是：<ol>
-<li>套接字初始化：socket() 生成套接字文件描述符</li>
-<li>套接字与端口绑定：bind()将套接字与一个地址结构绑定</li>
-<li>设置服务器监听链接：listen()</li>
-<li>接收客户端连接：accept()</li>
-<li>接收和发送数据：read()和write()</li>
-<li>处理完成后关闭套接字:close()</li>
-</ol>
-</li>
-<li>客户端程序设计模式<br>流程主要是：<ol>
-<li>套接字初始化：socket()</li>
-<li>连接服务器：connect()</li>
-<li>读写网络数据：read()和write()</li>
-<li>关闭套接字：close()<br>通信过程示意图如下：</li>
-</ol>
-</li>
-</ul>
-<p><img src="./img/cs.jpg" alt></p>
-<ul>
-<li>linux 信号处理<br>信号是有时候发生某些事件时的通知，有时候也称为软中断。信号的捕捉由系统完成，信号的注册函数signal()</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;signal.h&gt;</span><br><span class="line">typedef void(*sighandler_t)(int);</span><br><span class="line">sighandler_t signal(int signum,sighandler_t handler);</span><br></pre></td></tr></table></figure>
-<h2 id="服务器和客户端的信息获取"><a href="#服务器和客户端的信息获取" class="headerlink" title="服务器和客户端的信息获取"></a>服务器和客户端的信息获取</h2><h1 id="字节序"><a href="#字节序" class="headerlink" title="字节序"></a>字节序</h1><ul>
-<li>字节序转换函数</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;arpa/inet.h&gt;</span><br><span class="line">uint32_t htonl(uint32_t hostlong)</span><br><span class="line">uint16_t htons(uint16_t hostshort)</span><br><span class="line">uint32_t ntonl(uin32_t  netlong)</span><br><span class="line">uint16_t ntons(uin16_t  netshort)</span><br></pre></td></tr></table></figure>
 
-        </div>
-        <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
 
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
-            
-            
-        </div>
+<div class="container tag-cate-wrap">
+    <div class="category-title-inner content has-text-centered">
+        <h1><strong style="border-top: 2px solid; border-bottom: 2px solid;">tag·socket</strong></h1>
     </div>
-</section>
-<script>
-    // 获取第一张图, 用以当封面背景图
-    var img = document.querySelectorAll('img')[1]
 
-    if (img) {
-        var header_box = document.querySelector('#header_box')
-        header_box.style.backgroundImage = 'url('+ img.src +')'
-    }
-</script>
+    
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/02/19/Linux网络编程随笔1/">
+                    
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="/img/head.png" style="height: 100%; width: 100%">
+                        </figure>
+                    </div>
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Linux网络编程随笔1</strong> <small class="post-date">at: 2019-02-19</small>
+                                <br>
+                                
+Linux网络编程TCP网络编程基础
+套接字结构
 
-<!-- for code block highlight --> 
-<!-- theme.block_highlight -->
-<!-- we do not guarantee the char sequences spell right, usr himself do it -->
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
-<script src="/js/highlight.min.js"></script>
-<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
+struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/}
+sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节
 
+在以太网中一般采用struct..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+</div>
       </div>
   </div>
   <style>

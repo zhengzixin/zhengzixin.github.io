@@ -17,20 +17,22 @@
   
   <title>Linux网络编程随笔1 | 人生的意义在于追求的过程，而不是最后的结果</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
+  <meta name="description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  st">
+<meta name="keywords" content="socket">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux网络编程随笔1">
 <meta property="og:url" content="http://zcxbb.com/2019/02/19/Linux网络编程随笔1/index.html">
 <meta property="og:site_name" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta property="og:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
+<meta property="og:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  st">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://zcxbb.com/img/head.png">
 <meta property="og:image" content="http://zcxbb.com/img/socketaddr.jpg">
 <meta property="og:image" content="http://zcxbb.com/img/cs.jpg">
-<meta property="og:updated_time" content="2019-02-19T06:09:17.579Z">
+<meta property="og:updated_time" content="2019-02-20T01:16:32.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux网络编程随笔1">
-<meta name="twitter:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  str">
-<meta name="twitter:image" content="http://zcxbb.com/img/socketaddr.jpg">
+<meta name="twitter:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  st">
+<meta name="twitter:image" content="http://zcxbb.com/img/head.png">
   
     <link rel="alternate" href="/atom.xml" title="人生的意义在于追求的过程，而不是最后的结果" type="application/atom+xml">
   
@@ -73,6 +75,10 @@
                 Home
             </a>
             
+            <a class="nav-item" href="/tags">
+                Tags
+            </a>
+            
         </div>
         <span class="nav-toggle" id="navMenuDropdown">
             <span></span>
@@ -83,6 +89,10 @@
             
             <a class="nav-item flex-1" href="/">
                 Home
+            </a>
+            
+            <a class="nav-item flex-1" href="/tags">
+                Tags
             </a>
             
         </div>
@@ -143,11 +153,14 @@
             
                 <div>
                     
+                         <a class="tag is-post-tag" href="/tags/socket/">socket</a>
+                    
                 </div>
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="Linux网络编程"><a href="#Linux网络编程" class="headerlink" title="Linux网络编程"></a>Linux网络编程</h1><h2 id="TCP网络编程基础"><a href="#TCP网络编程基础" class="headerlink" title="TCP网络编程基础"></a>TCP网络编程基础</h2><ul>
+            <p><img src="/img/head.png" height="10%" width="10%"></p>
+<h1 id="Linux网络编程"><a href="#Linux网络编程" class="headerlink" title="Linux网络编程"></a>Linux网络编程</h1><h2 id="TCP网络编程基础"><a href="#TCP网络编程基础" class="headerlink" title="TCP网络编程基础"></a>TCP网络编程基础</h2><ul>
 <li>套接字结构</li>
 </ul>
 <p>struct socketaddr{<br>    sa_family_t sa_family;/<em>协议族</em>/<br>    char sa_data[14];     /<em>协议族数据</em>/<br>}</p>
