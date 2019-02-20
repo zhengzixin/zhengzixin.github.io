@@ -137,33 +137,37 @@
                 
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  is-7-desktop">
-        <a href="/2019/02/19/Linux网络编程随笔1/">
+        <a href="/2019/02/20/Linux网络编程之UDP/">
             <div class="full-height post-hover" style="
-                         background-image: url('/img/head.png');
+                         background-image: url('/img/hexo.jpg');
                          height: 350px;
                          background-size: cover;
                          background-repeat: no-repeat;
                          ">
                     <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
                         <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            Linux网络编程随笔1
+                            Linux网络编程之UDP
                         </h1>
                         <div>
                         
                             `
-                                <span class="tag is-post-tag">socket</span>
+                                <span class="tag is-post-tag">网络编程UDP</span>
                             
                         
                         </div>
                         <p class="post-content-text is-marginless has-padding text-shadow">
                             
-Linux网络编程TCP网络编程基础
-套接字结构
+UDP编程框架
+###　UDP协议服务器流程
 
-struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/}
-sa_fami..
+套接字建立 socket()
+套接字与地址结构绑定bind()
+收发数据 rcv()/rcvfrom() send()/sendto()
+关闭套接字 close()
+
+UDP协议客户端流..
                         </p>
-                        <p class="date text-shadow">2019-02-19</p>
+                        <p class="date text-shadow">2019-02-20</p>
                         <button class="button is-info is-small">Read More</button>
                     </div>
             </div>
@@ -171,6 +175,32 @@ sa_fami..
     </div>
     <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
         <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
+            
+                
+<a class="post-hover" href="/2019/02/19/Linux网络编程随笔1/" style="height: 48.5%">
+    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('/img/hexo.jpg')">
+        <div class="content-bg-mask full-width full-height has-padding">
+            <h3 class="title is-marginless text-shadow">
+                Linux网络编程随笔1
+            </h3>
+            
+            
+            <span class="tag is-post-tag">socket</span>
+            
+            
+            <p class="sub-title text-shadow"></p>
+            <p class="is-marginless text-shadow post-content-text">
+                
+Linux网络编程TCP网络编程基础
+套接字结构
+
+struct socketaddr{   ..
+            </p>
+            <p class="date text-shadow is-marginless">2019-02-19</p>
+        </div>
+    </div>
+</a>
+            
             
                 
 <a class="post-hover" href="/2019/02/18/我的第一篇博客/" style="height: 48.5%">
@@ -193,10 +223,35 @@ sa_fami..
     </div>
 </a>
             
-            
         </div>
     </div>
     <div class="column is-12 is-hidden-desktop">
+        
+        
+<a class="post-hover" href="/2019/02/19/Linux网络编程随笔1/" style="height: 48.5%">
+    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('/img/hexo.jpg')">
+        <div class="content-bg-mask full-width full-height has-padding">
+            <h3 class="title is-marginless text-shadow">
+                Linux网络编程随笔1
+            </h3>
+            
+            
+            <span class="tag is-post-tag">socket</span>
+            
+            
+            <p class="sub-title text-shadow"></p>
+            <p class="is-marginless text-shadow post-content-text">
+                
+Linux网络编程TCP网络编程基础
+套接字结构
+
+struct socketaddr{   ..
+            </p>
+            <p class="date text-shadow is-marginless">2019-02-19</p>
+        </div>
+    </div>
+</a>
+        
         
         
 <a class="post-hover" href="/2019/02/18/我的第一篇博客/" style="height: 48.5%">
@@ -219,11 +274,46 @@ sa_fami..
     </div>
 </a>
         
-        
     </div>
 </div>
 
                     
+                    
+                
+                    
+                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2019/02/19/Linux网络编程随笔1/">
+                            <div class="columns" style="min-height: 230px;">
+                                
+                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/hexo.jpg')">
+                                    </div>
+                                
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>Linux网络编程随笔1</h3>
+                                        
+                                        <p>
+                                            
+                                                <span class="tag is-post-tag">socket</span>
+                                            
+                                        </p>
+                                        <p>
+                                            
+Linux网络编程TCP网络编程基础
+套接字结构
+
+struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/}
+sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节
+
+在以太网中一般采用struct..
+                                        </p>
+                                        <p>2019-02-19</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
                     
                 
                     

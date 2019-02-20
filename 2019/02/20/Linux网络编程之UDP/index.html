@@ -15,23 +15,22 @@
   </script>
 
   
-  <title>Linux网络编程随笔1 | 人生的意义在于追求的过程，而不是最后的结果</title>
+  <title>Linux网络编程之UDP | 人生的意义在于追求的过程，而不是最后的结果</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  st">
-<meta name="keywords" content="socket">
+  <meta name="description" content="UDP编程框架 ###　UDP协议服务器流程  套接字建立 socket() 套接字与地址结构绑定bind() 收发数据 rcv()/rcvfrom() send()/sendto() 关闭套接字 close()  UDP协议客户端流程 建立套接字 socket() 收发数据 关闭套接字">
+<meta name="keywords" content="网络编程UDP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux网络编程随笔1">
-<meta property="og:url" content="http://zcxbb.com/2019/02/19/Linux网络编程随笔1/index.html">
+<meta property="og:title" content="Linux网络编程之UDP">
+<meta property="og:url" content="http://zcxbb.com/2019/02/20/Linux网络编程之UDP/index.html">
 <meta property="og:site_name" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta property="og:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  st">
+<meta property="og:description" content="UDP编程框架 ###　UDP协议服务器流程  套接字建立 socket() 套接字与地址结构绑定bind() 收发数据 rcv()/rcvfrom() send()/sendto() 关闭套接字 close()  UDP协议客户端流程 建立套接字 socket() 收发数据 关闭套接字">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://zcxbb.com/img/hexo.jpg">
-<meta property="og:image" content="http://zcxbb.com/img/socketaddr.jpg">
-<meta property="og:image" content="http://zcxbb.com/img/cs.jpg">
-<meta property="og:updated_time" content="2019-02-20T08:08:46.860Z">
+<meta property="og:image" content="http://zcxbb.com/img/udp1.jpg">
+<meta property="og:updated_time" content="2019-02-20T08:08:43.975Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux网络编程随笔1">
-<meta name="twitter:description" content="Linux网络编程TCP网络编程基础 套接字结构  struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/} sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节  在以太网中一般采用struct socketadd_in 进行设置  st">
+<meta name="twitter:title" content="Linux网络编程之UDP">
+<meta name="twitter:description" content="UDP编程框架 ###　UDP协议服务器流程  套接字建立 socket() 套接字与地址结构绑定bind() 收发数据 rcv()/rcvfrom() send()/sendto() 关闭套接字 close()  UDP协议客户端流程 建立套接字 socket() 收发数据 关闭套接字">
 <meta name="twitter:image" content="http://zcxbb.com/img/hexo.jpg">
   
     <link rel="alternate" href="/atom.xml" title="人生的意义在于追求的过程，而不是最后的结果" type="application/atom+xml">
@@ -142,62 +141,37 @@
     <div class="container post-box">
         <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
             <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
-                <strong>Linux网络编程随笔1</strong>
+                <strong>Linux网络编程之UDP</strong>
             </h1>
             
             <div class="is-flex align-center">
                 <img class="post-avatar" src="/img/head.png">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> 熙宝爸爸</span>
-                <span class="post-date sub-title">at: 2019-02-19</span>
+                <span class="post-date sub-title">at: 2019-02-20</span>
             </div>
             
                 <div>
                     
-                         <a class="tag is-post-tag" href="/tags/socket/">socket</a>
+                         <a class="tag is-post-tag" href="/tags/网络编程UDP/">网络编程UDP</a>
                     
                 </div>
             
         </div>
         <div class="content" style="overflow: auto">
             <p><img src="/img/hexo.jpg"></p>
-<h1 id="Linux网络编程"><a href="#Linux网络编程" class="headerlink" title="Linux网络编程"></a>Linux网络编程</h1><h2 id="TCP网络编程基础"><a href="#TCP网络编程基础" class="headerlink" title="TCP网络编程基础"></a>TCP网络编程基础</h2><ul>
-<li>套接字结构</li>
-</ul>
-<p>struct socketaddr{<br>    sa_family_t sa_family;/<em>协议族</em>/<br>    char sa_data[14];     /<em>协议族数据</em>/<br>}</p>
-<p>sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节</p>
+<h2 id="UDP编程框架"><a href="#UDP编程框架" class="headerlink" title="UDP编程框架"></a>UDP编程框架</h2><p><img src="/img/udp1.jpg"></p>
+<p>###　UDP协议服务器流程</p>
 <ul>
-<li>在以太网中一般采用struct socketadd_in 进行设置</li>
+<li>套接字建立 socket()</li>
+<li>套接字与地址结构绑定bind()</li>
+<li>收发数据 rcv()/rcvfrom() send()/sendto()</li>
+<li>关闭套接字 close()</li>
 </ul>
-<p>struct socketaddr_in{<br>    u8     sin_len;<br>    u8     sin_family;<br>    u16    sin_port;<br>    struct in_addr sin_addr;<br>    char sin_zero[8];<br>}</p>
-<p>两个结构体长度都为16个字节，两者对应关系如下：<br><img src="/img/socketaddr.jpg"></p>
-<h2 id="TCP-网络编程流程"><a href="#TCP-网络编程流程" class="headerlink" title="TCP 网络编程流程"></a>TCP 网络编程流程</h2><ul>
-<li>tcp网络架构<br>tcp网络编程有两种模式，1种是服务器模式，1种是客户端模式。服务器创建服务，等待客户端用户连接。</li>
-<li>服务端程序设计模式<br>流程主要是：<pre><code>1.套接字初始化：socket() 生成套接字文件描述符
-2.套接字与端口绑定：bind()将套接字与一个地址结构绑定
-3.设置服务器监听链接：listen()
-4.接收客户端连接：accept()
-5.接收和发送数据：read()和write()
-6.处理完成后关闭套接字:close()
-</code></pre></li>
-<li>客户端程序设计模式<br>流程主要是：<pre><code>1.套接字初始化：socket()
-2.连接服务器：connect()
-3.读写网络数据：read()和write()
-4.关闭套接字：close()
-</code></pre>通信过程示意图如下：</li>
+<h3 id="UDP协议客户端流程"><a href="#UDP协议客户端流程" class="headerlink" title="UDP协议客户端流程"></a>UDP协议客户端流程</h3><ul>
+<li>建立套接字 socket()</li>
+<li>收发数据</li>
+<li>关闭套接字</li>
 </ul>
-<p><img src="/img/cs.jpg"></p>
-<ul>
-<li>linux 信号处理<br>信号是有时候发生某些事件时的通知，有时候也称为软中断。信号的捕捉由系统完成，信号的注册函数signal()</li>
-</ul>
-<blockquote>
-<p>#include &lt;signal.h&gt;<br>   typedef void(*sighandler_t)(int);<br>   sighandler_t signal(int signum,sighandler_t handler);</p>
-</blockquote>
-<h2 id="服务器和客户端的信息获取"><a href="#服务器和客户端的信息获取" class="headerlink" title="服务器和客户端的信息获取"></a>服务器和客户端的信息获取</h2><h1 id="字节序"><a href="#字节序" class="headerlink" title="字节序"></a>字节序</h1><ul>
-<li>字节序转换函数</li>
-</ul>
-<blockquote>
-<p>   #include &lt;arpa/inet.h&gt;<br>   uint32_t htonl(uint32_t hostlong)<br>   uint16_t htons(uint16_t hostshort)<br>   uint32_t ntonl(uin32_t  netlong)<br>   uint16_t ntons(uin16_t  netshort)</p>
-</blockquote>
 
         </div>
         <div class="post-reply">
