@@ -15,18 +15,28 @@
   </script>
 
   
-  <title>人生的意义在于追求的过程，而不是最后的结果</title>
+  <title>filezilla Server 配置教程 | 人生的意义在于追求的过程，而不是最后的结果</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本人的个人博客用于发表本人的一些心得体会,www.zcxbb.com 是本人的个人域名。主要是技术类网址linux、物联网、嵌入式等">
-<meta property="og:type" content="website">
-<meta property="og:title" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta property="og:url" content="http://zcxbb.com/index.html">
+  <meta name="description" content="FileZilla Server的配置教程 FileZilla Server完成安装后，弹出【连接到服务器】窗体。可以在【管理密码】输入框中输入本服务器FileZilla Server的密码，输入端口号（端口号和之前安装过程中设置的端口号一致）。然后勾选【总是连接到该服务器】，点击【确定】按钮。建议选中“总是连接到本服务器”的选项，即表示每次启动管理控制台，都是管理本机的FileZilla Ser">
+<meta name="keywords" content="FileZilla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="filezilla Server 配置教程">
+<meta property="og:url" content="http://zcxbb.com/2019/03/01/filezilla-Server-配置教程/index.html">
 <meta property="og:site_name" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta property="og:description" content="本人的个人博客用于发表本人的一些心得体会,www.zcxbb.com 是本人的个人域名。主要是技术类网址linux、物联网、嵌入式等">
+<meta property="og:description" content="FileZilla Server的配置教程 FileZilla Server完成安装后，弹出【连接到服务器】窗体。可以在【管理密码】输入框中输入本服务器FileZilla Server的密码，输入端口号（端口号和之前安装过程中设置的端口号一致）。然后勾选【总是连接到该服务器】，点击【确定】按钮。建议选中“总是连接到本服务器”的选项，即表示每次启动管理控制台，都是管理本机的FileZilla Ser">
 <meta property="og:locale" content="Chinese">
+<meta property="og:image" content="http://zcxbb.com/img/filezillaserver_01.jpg">
+<meta property="og:image" content="http://zcxbb.com/img/filezillaserver_02.png">
+<meta property="og:image" content="http://zcxbb.com/img/filezillaserver_03.png">
+<meta property="og:image" content="http://zcxbb.com/img/filezillaserver_04.png">
+<meta property="og:image" content="http://zcxbb.com/img/filezillaserver_05.png">
+<meta property="og:image" content="http://zcxbb.com/img/filezillaserver_06.png">
+<meta property="og:image" content="http://zcxbb.com/img/filezillaserver_07.png">
+<meta property="og:updated_time" content="2019-03-01T00:59:35.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人生的意义在于追求的过程，而不是最后的结果">
-<meta name="twitter:description" content="本人的个人博客用于发表本人的一些心得体会,www.zcxbb.com 是本人的个人域名。主要是技术类网址linux、物联网、嵌入式等">
+<meta name="twitter:title" content="filezilla Server 配置教程">
+<meta name="twitter:description" content="FileZilla Server的配置教程 FileZilla Server完成安装后，弹出【连接到服务器】窗体。可以在【管理密码】输入框中输入本服务器FileZilla Server的密码，输入端口号（端口号和之前安装过程中设置的端口号一致）。然后勾选【总是连接到该服务器】，点击【确定】按钮。建议选中“总是连接到本服务器”的选项，即表示每次启动管理控制台，都是管理本机的FileZilla Ser">
+<meta name="twitter:image" content="http://zcxbb.com/img/filezillaserver_01.jpg">
   
     <link rel="alternate" href="/atom.xml" title="人生的意义在于追求的过程，而不是最后的结果" type="application/atom+xml">
   
@@ -104,671 +114,114 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
-    }
-
-    .primary-container .post-hover {
-        background: black;
-    }
-
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
-    }
-
-</style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/03/01/filezilla-Server-配置教程/">
-            <div class="full-height post-hover" style="
-                         background-image: url('/img/filezillaserver_01.jpg');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            filezilla Server 配置教程
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">FileZilla</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            FileZilla Server的配置教程
-FileZilla Server完成安装后，弹出【连接到服务器】窗体。可以在【管理密码】输入框中输入本服务器FileZilla Server的密码，输入端口号（端口号和之前安装过程中设置的端口..
-                        </p>
-                        <p class="date text-shadow">2019-03-01</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
-            </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
-            
-                
-<a class="post-hover" href="/2019/02/28/sqlyog连接mysql-报错2058/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('/img/201902280951.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                sqlyog连接mysql 报错2058
-            </h3>
-            
-            
-            <span class="tag is-post-tag">sqlyog mysql</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                为了方便安装查看，我下载了sqlyog 工具 连接 mysql
-配置新连接报错：错误号码 205..
-            </p>
-            <p class="date text-shadow is-marginless">2019-02-28</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/02/28/sql数据库高清图书/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('/img/201902280951.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                sql数据库高清图书
-            </h3>
-            
-            
-            <span class="tag is-post-tag">sql</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-分享3本关于SQL的书籍最近有项目需要使用到SQL，就在网上找了找，找到了比较好的几本书而且都..
-            </p>
-            <p class="date text-shadow is-marginless">2019-02-28</p>
-        </div>
-    </div>
-</a>
-            
-        </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/02/28/sqlyog连接mysql-报错2058/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('/img/201902280951.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                sqlyog连接mysql 报错2058
-            </h3>
-            
-            
-            <span class="tag is-post-tag">sqlyog mysql</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                为了方便安装查看，我下载了sqlyog 工具 连接 mysql
-配置新连接报错：错误号码 205..
-            </p>
-            <p class="date text-shadow is-marginless">2019-02-28</p>
-        </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/02/28/sql数据库高清图书/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('/img/201902280951.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                sql数据库高清图书
-            </h3>
-            
-            
-            <span class="tag is-post-tag">sql</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-分享3本关于SQL的书籍最近有项目需要使用到SQL，就在网上找了找，找到了比较好的几本书而且都..
-            </p>
-            <p class="date text-shadow is-marginless">2019-02-28</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/28/sqlyog连接mysql-报错2058/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/201902280951.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>sqlyog连接mysql 报错2058</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">sqlyog mysql</span>
-                                            
-                                        </p>
-                                        <p>
-                                            为了方便安装查看，我下载了sqlyog 工具 连接 mysql
-配置新连接报错：错误号码 2058，分析是 mysql 密码加密方法变了。
-
-解决方法：windows 下cmd 登录 mysql 
-切换到root账户 
-在mysql中执行ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_..
-                                        </p>
-                                        <p>2019-02-28</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/28/sql数据库高清图书/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/201902280951.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>sql数据库高清图书</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">sql</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-分享3本关于SQL的书籍最近有项目需要使用到SQL，就在网上找了找，找到了比较好的几本书而且都是高清的。
-##下面是百度网盘的地址：链接：https://pan.baidu.com/s/1EH7Z3mTKN_R-UBD_V3bMnA提取码：1qi7 
-
-                                        </p>
-                                        <p>2019-02-28</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/22/错误不能烧写flash/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/20190222_1.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>解决esp32 MD5错误不能烧写flash</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">esp32</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-                                        </p>
-                                        <p>2019-02-22</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/21/git命令速查表/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/git命令速查表.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>git命令速查表</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">git</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-                                        </p>
-                                        <p>2019-02-21</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/21/创建esp32的工程模版/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/espressif_log.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>创建esp32的工程模版</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">esp32</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-前提：已经搭建好了自己的编译环境(按照官方教程就可以了)我的是环境是windows+MinGW
-
-创建app文件夹，在app文件夹中创建自己的工程文件夹比如定义test
-
-进入test文件夹，先创建目录main 文件夹和hal文件夹，driver文件
-
-创建makefile文件，makefile 的写法是：
-
-进入main文件夹中，创建main.c 和..
-                                        </p>
-                                        <p>2019-02-21</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/21/Linux网络编程之UDP/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/hexo.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Linux网络编程之UDP</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">网络编程UDP</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-UDP编程框架
-###　UDP协议服务器流程
-
-套接字建立 socket()
-套接字与地址结构绑定bind()
-收发数据 rcv()/rcvfrom() send()/sendto()
-关闭套接字 close()
-
-UDP协议客户端流程
-建立套接字 socket()
-收发数据
-关闭套接字
-
-
-                                        </p>
-                                        <p>2019-02-21</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/19/Linux网络编程随笔1/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/hexo.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Linux网络编程随笔1</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">socket</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-Linux网络编程TCP网络编程基础
-套接字结构
-
-struct socketaddr{    sa_family_t sa_family;/协议族/    char sa_data[14];     /协议族数据/}
-sa_family_t 为unsigned short 类型，socketaddr总长度为16个字节
-
-在以太网中一般采用struct..
-                                        </p>
-                                        <p>2019-02-19</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/02/18/我的第一篇博客/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('/img/github.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>基于github page+hexo搭建个人域名博客网址</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">github</span>
-                                            
-                                        </p>
-                                        <p>
-                                            域名购买选在一个域名厂商购买域名，我本人是在百度云购买的www.zcx.com 价格还不贵一年几十块
-注册github账号
-安装hexo git
-
-在bolg文件夹按住shift键点击鼠标右键，点击在此处打开命令行。执行命令：npm install hexo-cli -g #安装hexo
-在命令行中 输入命令：npm install hexo-deplo..
-                                        </p>
-                                        <p>2019-02-18</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                        
-                        
-                    
-                </nav>
-            </section>
-            
-                <style>
-    /*user info start*/
-    .user-info {
-        padding: 15px 0 0;
-    }
-
-    .user-info .avatar {
-        width: 155px;
-        height: 155px;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
     }
 
-    .sns-container {
-        flex-wrap: wrap;
-    }
-
-    .sns-container a{
-        color: black;
-    }
-    /*user info end*/
-
-    /*Tag start*/
-    #tag_cloud .tags-item{
-        display: inline-block;
-        color: #000;
-        border: 1px solid gray;
-
-        margin: 4px 2px;
-        padding: 0 4px;
-        border-radius: 6px;
-    }
-    /*Tag end*/
-
-    /*Site box start*/
-    .site-box {
-        height: 60px;
-    }
-    /*Site box end*/
-
-    .category-list-item,
-    .archive-list-item {
-        display: flex;
-        margin-bottom: 4px;
-        justify-content: space-between;
-    }
-    .category-list-link,
-    .archive-list-link {
-        color: black;
-    }
-
-    .category-list-count,
-    .archive-list-count {
-        width: 32px;
+    .flow-chart {
         text-align: center;
-        border-radius: 4px;
-        color: #fff;
-        background-color: gray;
+    }
+
+    img[alt="post-cover"] {
+        display: none;
     }
 </style>
-<aside class="column is-hidden-touch is-3" style="max-width: 280px; min-width: 230px">
-    <div class="content-box user-info">
-        <div class="has-padding">
-            <header class="has-text-centered">
-                <img class="avatar" src="/img/head.png">
-            </header>
-            <section class="has-text-centered">
-                <h3><strong>熙宝爸爸</strong></h3>
-                <p class="sub-title">随笔</p>
-                
-                <p class="is-flex center" style=" color: gray">
-                    <i class="fa fa-map-marker" style="padding: 5px"></i>
-                    China
-                </p>
-                
-            </section>
-        </div>
-        <div class="top-line">
-            <ul class="sns-container justify-center is-flex has-padding">
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://twitter.com/AitZhengchunyu">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/zhengzixin123">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://www.facebook.com/zheng.xiaoxin.5">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://github.com/zhengzixin">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-            </ul>
-        </div>
-    </div>
-    <div class="content-box">
-        <!--post数量和tag category 数量-->
-        <div class="site-box is-flex">
-            <div class="flex-1 is-flex flex-column center full-height right-line">
-                <strong>9</strong>
-                <p>Posts</p>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>filezilla Server 配置教程</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="/img/head.png">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> 熙宝爸爸</span>
+                <span class="post-date sub-title">at: 2019-03-01</span>
             </div>
-            <div class="flex-1 is-flex flex-column center full-height">
-                <strong>8</strong>
-                <p>Tags</p>
-            </div>
+            
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/FileZilla/">FileZilla</a>
+                    
+                </div>
+            
         </div>
-    </div>
-    <div id="tag_cloud" class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Tags</strong>
+        <div class="content" style="overflow: auto">
+            <h2 id="FileZilla-Server的配置教程"><a href="#FileZilla-Server的配置教程" class="headerlink" title="FileZilla Server的配置教程"></a>FileZilla Server的配置教程</h2><ul>
+<li>FileZilla Server完成安装后，弹出【连接到服务器】窗体。可以在【管理密码】输入框中输入本服务器FileZilla Server的密码，输入端口号（端口号和之前安装过程中设置的端口号一致）。然后勾选【总是连接到该服务器】，点击【确定】按钮。建议选中“总是连接到本服务器”的选项，即表示每次启动管理控制台，都是管理本机的FileZilla Server。<br><img src="/img/filezillaserver_01.jpg"></li>
+<li>启动FileZilla Server的主界面，如果出现平【Logged on】或【Server online】的字样，表示已经顺利上线。点击菜单中的闪电图标切换上线、离线，即可手动开启或关闭FTP服务。<br><img src="/img/filezillaserver_02.png"></li>
+<li>依次点击【编辑】——【用户】按钮，弹出【用户】窗体<br><img src="/img/filezillaserver_03.png"></li>
+<li>首先在【用户】管理区域点击【添加】按钮，弹出【添加用户账户】窗体，输入用户名，点击【确定】按钮，为FTP服务器添加一个用户。然后在【账户设置】区域中可以设置密码。<br><img src="/img/filezillaserver_04.png"><br><img src="/img/filezillaserver_05.png"><br><img src="/img/filezillaserver_06.png"></li>
+<li>在FileZilla Server左侧的【页面】控件树中点击【Shared folders】，在【共享文件夹】区域中点击【添加】按钮，选择一个文件夹作为FTP的共享文件夹，然后点击【设为主目录】按钮，将该目录设置为主目录。最后点击窗体下方的【确定】按钮，完成配置。<br><img src="/img/filezillaserver_07.png"></li>
+</ul>
+<p>百度网盘地址：<br>链接：<a href="https://pan.baidu.com/s/18TxCJhrRy0A2ryNnddAcwQ" target="_blank" rel="noopener">https://pan.baidu.com/s/18TxCJhrRy0A2ryNnddAcwQ</a><br>提取码：7v6k </p>
+
         </div>
-        <div class="content-inner is-flex flex-wrap justify-space-between">
+        <div class="post-reply">
             
-                <a class="tags-item" href="tags/网络编程UDP/" title="网络编程UDP" rel="1">
-                    网络编程UDP
-                </a>
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-                <a class="tags-item" href="tags/FileZilla/" title="FileZilla" rel="1">
-                    FileZilla
-                </a>
-            
-                <a class="tags-item" href="tags/git/" title="git" rel="1">
-                    git
-                </a>
-            
-                <a class="tags-item" href="tags/sqlyog-mysql/" title="sqlyog mysql" rel="1">
-                    sqlyog mysql
-                </a>
-            
-                <a class="tags-item" href="tags/sql/" title="sql" rel="1">
-                    sql
-                </a>
-            
-                <a class="tags-item" href="tags/esp32/" title="esp32" rel="2">
-                    esp32
-                </a>
-            
-                <a class="tags-item" href="tags/github/" title="github" rel="1">
-                    github
-                </a>
-            
-                <a class="tags-item" href="tags/socket/" title="socket" rel="1">
-                    socket
-                </a>
             
         </div>
     </div>
-    <div class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Categories</strong>
-        </div>
-        <div class="content-inner">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iot/">iot</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
-        </div>
-    </div>
-    <div class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Archives</strong>
-        </div>
-        <div class="content-inner">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">8</span></li></ul>
-        </div>
-    </div>
-</aside>
-            
-        </div>
-    </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
